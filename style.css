@@ -1,0 +1,79 @@
+:root {
+  --neon-pink: #ff2d75;
+  --neon-blue: #00f0ff;
+  --dark-bg: #121212;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: var(--dark-bg);
+  color: white;
+}
+.navbar-brand,
+.btn-primary {
+  font-weight: 700;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/hero.JPG');
+  background-size: cover;
+  padding: 150px 0;
+}
+.price-card {
+  background: #1e1e1e;
+  border: 1px solid var(--neon-pink);
+  transition: transform 0.3s;
+}
+.price-card:hover {
+  transform: translateY(-10px);
+}
+.neon-text {
+  text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-blue);
+}
+.section-title {
+  border-bottom: 2px solid var(--neon-blue);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.gallery-img-container {
+  aspect-ratio: 1 / 1; /* Квадратные ячейки */
+  overflow: hidden;
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+#galleryModal .modal-content {
+  background: transparent;
+}
+#galleryModal .btn-close {
+  filter: brightness(0) invert(1);
+}
+.btn-icon {
+  width: 1em; /* Размер относительно шрифта кнопки */
+  height: 1em;
+  vertical-align: middle; /* Выравнивание по центру текста */
+}
+@media (max-width: 768px) {
+  .map-container {
+    padding-bottom: 75%; /* Более высокий контейнер */
+  }
+  .nav-item .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar-brand {
+    flex-grow: 1;
+  }
+  .navbar-toggler {
+    margin-left: auto;
+  }
+  .navbar-collapse {
+    text-align: right;
+  }
+}
